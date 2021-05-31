@@ -4098,9 +4098,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 class NewsApiService {
   constructor() {
     _defineProperty(this, "fetchImages", () => {
-      _axios.default.defaults.baseURL = `https://pixabay.com/api/`;
-      const API_KEY = `21859800-af94843fb327cc57780ddd667`;
-      let params = `?image_type=photo&orientation=horizontal&key=${API_KEY}
+      //  axios.defaults.baseURL = `https://pixabay.com/api/`;
+      //  const API_KEY = `21859800-af94843fb327cc57780ddd667`;
+      let params = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&key=21859800-af94843fb327cc57780ddd667
      &per_page=12&page=${this.page}&q=${this.searchQuery}`;
       return _axios.default.get(params).then(response => response = response.data).then(data => {
         // console.log(data);
@@ -4171,4 +4171,4 @@ function clearImagesCard() {
   articlesContainer.innerHTML = '';
 }
 },{"./templates/images-card.hbs":"Z1z2","./css/main.css":"I7Ak","./js/apiService":"eQwa"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-13-image-finder/src.cea1b282.js.map
+//# sourceMappingURL=/goit-js-hw-13-image-finder/src.8a20bc20.js.map
