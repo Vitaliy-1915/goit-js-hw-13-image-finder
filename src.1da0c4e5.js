@@ -4100,8 +4100,7 @@ class NewsApiService {
     _defineProperty(this, "fetchImages", () => {
       //  axios.defaults.baseURL = `https://pixabay.com/api/`;
       //  const API_KEY = `21859800-af94843fb327cc57780ddd667`;
-      let params = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&key=21859800-af94843fb327cc57780ddd667
-     &per_page=12&page=${this.page}&q=${this.searchQuery}`;
+      let params = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=21859800-af94843fb327cc57780ddd667`;
       return _axios.default.get(params).then(response => response = response.data).then(data => {
         // console.log(data);
         this.page += 1;
@@ -4171,4 +4170,4 @@ function clearImagesCard() {
   articlesContainer.innerHTML = '';
 }
 },{"./templates/images-card.hbs":"Z1z2","./css/main.css":"I7Ak","./js/apiService":"eQwa"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-13-image-finder/src.8a20bc20.js.map
+//# sourceMappingURL=/goit-js-hw-13-image-finder/src.1da0c4e5.js.map
