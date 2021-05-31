@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { data } from 'browserslist';
+
 
 export default class NewsApiService {
     constructor() {
@@ -18,9 +18,8 @@ export default class NewsApiService {
                 this.page += 1;
                 return data.hits;
             });
-
     }
-
+    
     resetPage() {
         this.page = 1;
     }
