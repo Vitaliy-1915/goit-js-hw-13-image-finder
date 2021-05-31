@@ -10,8 +10,7 @@ export default class NewsApiService {
     fetchImages = () => {
     //  axios.defaults.baseURL = `https://pixabay.com/api/`;
     //  const API_KEY = `21859800-af94843fb327cc57780ddd667`;
-     let params = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&key=21859800-af94843fb327cc57780ddd667
-     &per_page=12&page=${this.page}&q=${this.searchQuery}`;
+     let params = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=21859800-af94843fb327cc57780ddd667`;
         return axios.get(params).then(response => response = response.data)
             .then(data => {
                 // console.log(data);
